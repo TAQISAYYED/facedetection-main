@@ -1,0 +1,164 @@
+/* ===== Global Styles ===== */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #0f111a, #1c1f33);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: transparent !important;
+}
+
+/* ===== App Container ===== */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center */
+  align-items: center;     /* horizontally center */
+  text-align: center;      /* ensures text alignment */
+  margin: 2rem 0;
+}
+
+.header h1,
+.header h2,
+.header p {
+  margin: 0.2rem 0; /* reduces extra spacing between lines */
+}
+.header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+ .header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #7f5af0, #5ac8fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0.2rem;
+}
+
+.header p {
+  color: #b0b0b0;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+} */
+
+/* ===== Dashboard / Cards ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: #1b1f34;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #252946;
+}
+
+.card h3 {
+  color: #b0b0b0;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ===== Buttons ===== */
+button {
+  background-color: #252946;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #5ac8fa;
+  color: #0f111a;
+}
+
+/* ===== Live Camera Section ===== */
+.live-camera-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  background-color: #0f111a; /* matches page background */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.live-camera-container video {
+  border-radius: 12px;
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  color: #7a7a7a;
+  margin-top: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  .header h2 {
+    font-size: 2rem;
+  }
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .live-camera-container {
+    max-width: 100%;
+  }
+}
+
+
